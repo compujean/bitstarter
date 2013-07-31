@@ -1,85 +1,306 @@
 <!DOCTYPE html>
-<html> 
-    <head>
+<html lang="en">
+<!-- HW4, Pt 1:  -->
+<!-- Part 1: Responsive Design and CSS Styling
+	We've annotated corresponding portions of the desktop and smartphone render. Apply the changes 
+	step-by-step to transform your unstyled index.html. Along the way, preview your changes and save 
+	them with git. Finally, when done, submit the github URL to the index.html of your styled, responsive file
+ -->
+  <head>
     <meta charset="utf-8">
-    <title> My First Bitstarter </title>
-    <link type="text/css" rel="stylesheet"
-        href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootsrap-2.3.2.css">
+    <title>My First *Styled* Bitstarter</title>
+    <meta name="viewport" content+"width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
+	<link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">   
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Diplomata+SC">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Simonetta">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Paytone+One">
+	<script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script> 
+    <link type="text/css" rel="stylesheet" 
+          href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-2.3.2.css">
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
     <style type="text/css">
-        body {
-            padding-top: 20px;
-            padding-bottom: 40px;
-        }
-        .comtainer {
-            width:960px;
-        }
-        p.lead {
-            padding-top: 15px;
-        }
-        .navigation, .pitch, .section1, .section2, .faq, .footer {
-            padding: 10px 0px 10px 0px;
-        }
-        .video, .thermometer, .order, .social {
-            border: 1px dotted;
-            text-align: center;
-        }
-        .video {
-            /* Internal borders have 1px W, 
-             *  thus need to add 4x1px to 120px 
-             */
-            height: 124px;
-            line-height: 124px;
-        }
-        .thermometer, .order, .social {
-            /* line-height to vertically center:
-             * http://phrogz.net/css/vertical-align/index.html
-             */
-             height: 40px;
-             line-height: 40px;
-        }
-        div.row {
-            border: 1px solid;
-        }
-    </style>    
-    </head>
 
-    <body>
+/* Large desktop */
+@media (min-width: 980px) {
+      body {
+        padding-top: 60px;
+      }
+	.linediv-C {
+	border-left: 1px white solid;
+	border-right: 1px white solid;
+	}
+}
+
+/* Landscape phones */
+@media (min-width: 480px) {
+	.copy {
+	padding: 2.5% 10%;
+	}
+        .linediv-L {
+        border-bottom: 1px white solid;
+        }
+        .line-div-C {
+        border-top: 1px white solid;
+        }
+}  
+
+/*
+ For the .heading and .subheading class, we use 
+the built-in p.lead from Bootstrap and also 
+import and use paired Google Fonts to make the 
+style look a little less default.
+1) www.google.com/fonts/specimen/Ubuntu
+2) www.google.com/fonts/specimen/
+Ubuntu#pairings
+3) http://twitter.github.io/bootstrap/basecss.html#typography
+
+ */     
+ 
+ 	body{
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    }      
+  
+.heading {
+	font-family:'Diplomata SC', 'Ubuntu', Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+.subheading {
+	font-family: Simonetta', 'Ubuntu', Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+      p.lead {
+        padding-top: 15px;
+		font-size: 24px
+		line-height: 30px;
+      }       
+      p {
+        font-size: 18px;
+        line-height: 24px;
+      }   
+.copy {
+	font-family: 'Paytone One', sans-serif;
+	font-weight: 600;
+}
+
+     /* Video pitch and Action */
+      .pitch {
+        padding: 2.5% 0%;
+      }
+      .order {
+        padding: 2% 0%;
+      }
+      .actions {
+        background-color: #343434;
+        padding: 3% 0%;
+      }
+      .video, .thermometer, .order, .social, .statistics {
+        text-align: center;
+      }
+      .statistics h3, .statistics p {
+        color: white;
+      }
+
+      /* Marketing Copy and Footer */
+      .copy {
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+        text-align: justify;
+      }
+      .asset {
+        padding: 2.5% 0%;
+      }
+      .footer {
+        color: #cccccc;
+        text-align: center;
+      }
+      .footer p {
+        font-size: 11px;
+      }
+      .footer a {
+        color: #ccccff;
+      }      
+    </style>
+  </head>
+
+<!-------------------- BODY ----------------------------------------- -->
+<!--  /***
+    The navbar (Logo Blank About) is a bit magical. If you notice, in the 
+mobile view it collapses into a dropdown menu! 
+We adapt this from one of the examples in the 
+starter-template, with one twist: we use a media 
+query for browsers with less than 980px width to 
+fix an issue where the navbar is pushed too far 
+down on mobile browsers.
+   -->
+ 
+    
+ <!--  START MOBILE-FRIENDLY (Collapsible) NAV BAR: Home About Contact -->
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
         <div class="container">
-            <div class="row navigation">
-                 <div class="span2 logo">Logo</div>
-                 <div class="span6 blank">Blank</div>
-                 <div class="span4 about">About</div>
-            </div>
-            <div class="row heading">
-                <div class="span12">
-                    <h1>Bitstarter Title</h1>
-                </div>
-            </div>
-            <div class="row subheading">
-                <div class="span12">
-                    <p class="lead">This is my first bitstarter project.</p>
-                </div>
-            </div>
-            <div class="row pitch">
-                <div class="span6 video">Video</div>
-                <div class="span6">
-                    <div class="thermometer">Thermometer</div>
-                    <div class="order">Order</div>
-                    <div class="social">Social</div>
-                </div>
-            </div>
-            <div class="row section1">  
-                <div class="span12">Marketing Section 1</div>
-            </div>
-            <div class="row section2">  
-                <div class="span12">Marketing Section 2</div>
-            </div>
-            <div class="row faq">  
-                <div class="span12">FAQ</div>
-            </div>
-            <div class="row footer">  
-                <div class="span12">Footer</div>
-            </div>
+          <button type="button" class="btn btn-navbar"
+                  data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Bitstarter</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>	<!--/.nav-collapse -->
+        </div>		<!--/.container -->
+      </div>		<!--/.navbar-inner -->
+    </div>			<!--/.navbar -->
+    <!--  END MOBILE-FRIENDLY NAV BAR -->
+    
+    <div class="container">
+      <div class="row-fluid heading">
+        <div class="span12">
+          <h1>Product</h1>
         </div>
-	</body>
+      </div> 
+     <div class="row-fluid subheading">
+        <div class="span12">
+          <p class="lead">This rocking product will knock your socks off!</p>
+        </div>
+      </div>
+
+<!-- PITCH: Video + 3-part stats: 1) # Backers, 2) $, 3( # days left + 2 ProgBars: $ (as % of goal) and Time -->
+      <div class="row-fluid pitch"> 
+        <div class="span5 offset1 video">                
+          <img class="img-polaroid" src="http://placehold.it/480x300">
+        </div>
+        
+        <div class="span5 actions">
+          <div class="span8 offset2">
+            <div class="statistics">
+              <div class="span4">
+                <div class="linediv-L">
+                <h3>1000</h3> <p>backers</p>
+                </div>
+              </div>
+              
+              <div class="span4">
+                <div class="linediv-C">
+                  <h3>$6000</h3> <p>of $10,000</p>
+                </div>
+              </div>
+              
+              <div class="span4">
+                <div class="linediv-R">
+                <h3>10</h3> <p>days left</p>
+                </div>
+              </div>
+            </div>	<!--  /.statistics -->
+          </div>	<!--  /.statistics offset -->
+          
+          <div class="span10 offset1">
+            <div class="thermometer progress active">
+              <div class="bar bar-success" style="width: 60%;"></div>
+              <div class="bar bar-warning" style="width: 100%;"></div>
+            </div>
+          </div>        
+                     
+          <div class="span6 offset3 order">
+            <button class="btn btn-success btn-large">Preorder</button>
+          </div>
+          
+          <div class="span8 offset2 social">
+            <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
+            <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
+          </div>
+        </div>		<!--  /.actions ln 144 -->
+      </div>		<!--  /.pitch, ln 138 -->
+      
+      <!--   /* MARKETING STARTS HERE */  -->      
+
+      <div class="row-fluid section1">
+        <div class="span5 offset1 asset">
+          <img class="img-polaroid" src="http://placehold.it/480x300">
+        </div>
+        <div class="span5 copy">
+          <p> AT LAST! THE PRODUCT YOU'VE BEEN DREAMING OF IS HERE! </p>
+        </div>
+	 </div>
+	 
+     <div class="row-fluid section2">
+        <div class="span5 offset1 copy copy-right">
+        	<p> BEAT THE HOLIDAY RUSH, AND GET IT WHILE SUPPLIES LAST! </p>
+        </div>
+     	<div class="span5 asset">
+          <img class="img-polaroid" src="http://placehold.it/480x300">
+     	</div>
+	 </div>	 
+ 
+<!-- This FAQ uses JS accordian, a COLLAPSIBLE ("ACCORDIAN") FAQ which requires jquery.js and bootstrap.js        
+      <div class="row faq">
+        <div class="span12">
+          FAQ
+        </div>
+      </div>
+ --> 
+      <div class="row-fluid faq">
+          <div class="span10 offset1">
+            <h3>FAQ</h3>
+            <div class="accordion" id="accordion2">
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse"
+                     data-parent="#accordion2" href="#collapseOne">
+WHAT DOES FAQ STAND FOR?                   
+                  </a>
+                </div>
+                <div id="collapseOne" class="accordion-body collapse">
+                  <div class="accordion-inner">
+Frequently Asked Questions.            
+                  </div>
+                </div>
+              </div>
+              
+              <div class="accordion-group">
+                <div class="accordion-heading">
+                  <a class="accordion-toggle" data-toggle="collapse"
+                     data-parent="#accordion2" href="#collapseTwo">
+WHAT IS AN FAQ?                   
+                  </a>
+                </div>
+                
+                <div id="collapseTwo" class="accordion-body collapse">
+                  <div class="accordion-inner">
+It is a set of questions most often asked by users, and the answers to those questions.             
+                  </div>
+                </div>	<!--  /.accordion-body collapse -->
+              </div>	<!--  /.acordian group -->
+            </div> 		<!--  /.acordian -->
+          </div>		<!--  /.FAQ offset -->
+         </div>			<!--  /.FAQ -->
+      
+<!--   /* Copyright is a typical footer       
+      <div class="row footer">
+        <div class="span12">
+          Footer
+        </div>
+      </div>
+-->
+ <div class="row-fluid footer">
+        <div class="span12">
+          <p>This work is licensed under
+            the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
+              By-SA 3.0
+            </a>, without all the cruft that would otherwise be
+            put at the bottom of the page.</p>
+        </div>
+      </div> 	<!--  /.footer -->
+    </div>		<!--  /.container post navbar, that contains main page content, ln 199 -->
+  </body>
 </html>
+
