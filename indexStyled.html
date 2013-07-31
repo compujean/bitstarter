@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- HW4, Pt2: Styled, Populated Crowdfunder Page -->
-<!-- Part 2: Responsive Design and CSS Styling
+<<<<<<< HEAD
+<!--    HW4, Pt 1:    -->
+<!-- Part 1: Responsive Design and CSS Styling
 	We've annotated corresponding portions of the desktop and smartphone render. Apply the changes 
 	step-by-step to transform your unstyled index.html. Along the way, preview your changes and save 
 	them with git. Finally, when done, submit the github URL to the index.html of your styled, responsive file
  -->
   <head>
     <meta charset="utf-8">
-    <title>Shop, Cook, Feast!</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First *Styled* Bitstarter</title>
+    <meta name="viewport" content+"width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
 	<link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">   
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Diplomata SC">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Diplomata+SC">
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Simonetta">
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Paytone One">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Paytone+One">
 	<script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script> 
     <link type="text/css" rel="stylesheet" 
@@ -33,8 +34,8 @@
 	border-left: 1px white solid;
 	border-right: 1px white solid;
 	}
-      // }
 }
+
 /* Landscape phones */
 @media (min-width: 480px) {
 	.copy {
@@ -84,7 +85,8 @@ Ubuntu#pairings
 .copy {
 	font-family: 'Paytone One', sans-serif;
 	font-weight: 600;
-} 
+}
+
      /* Video pitch and Action */
       .pitch {
         padding: 2.5% 0%;
@@ -134,19 +136,7 @@ starter-template, with one twist: we use a media
 query for browsers with less than 980px width to 
 fix an issue where the navbar is pushed too far 
 down on mobile browsers.
-THIS IS THE PRE-STYLED NAV:      
-      <div class="row navigation">
-        <div class="span2 logo">
-          Logo
-        </div>
-        <div class="span6 blank">
-          Blank
-        </div>
-        <div class="span4 about">
-          About
-        </div>
-      </div>
- END PRE-STYLED nav bar ***/     -->
+   -->
  
     
  <!--  START MOBILE-FRIENDLY (Collapsible) NAV BAR: Home About Contact -->
@@ -176,41 +166,19 @@ THIS IS THE PRE-STYLED NAV:
     <div class="container">
       <div class="row-fluid heading">
         <div class="span12">
-          <h1>Feast! <br/>Shop, Serve and Savor.</h1>
+          <h1>Product</h1>
         </div>
       </div> 
      <div class="row-fluid subheading">
         <div class="span12">
-          <p class="lead">Take your dinner guests on an exotic trip each time they visit your dining room! 
-          Learn not only how to cook exotic dishes, but also how to shop like a native in local markets. Pick a country or cuisine. 
-          Learn from an expert how and where to shop like a local, then enjoy the fruit of the cooking secrets you've unlocked. 
-          </p>
+          <p class="lead">This rocking product will knock your socks off!</p>
         </div>
       </div>
-      
-<!--   /****  GETTING RID OF PRE-RESPONSIVE index.html, Pt 2      
-      <div class="row pitch">
-        <div class="span6 video">
-          Video
-        </div>
-        <div class="span6">
-          <div class="thermometer">
-            Thermometer
-          </div>
-          <div class="order">
-            Order
-          </div>
-          <div class="social">
-            Social
-          </div>
-        </div>
-      </div>
-<!--   /****  END GETTING RID OF PRE-RESPONSIVE index.html, Pt 2  ***/  -->
 
 <!-- PITCH: Video + 3-part stats: 1) # Backers, 2) $, 3( # days left + 2 ProgBars: $ (as % of goal) and Time -->
       <div class="row-fluid pitch"> 
         <div class="span5 offset1 video">                
-          <img class="img-polaroid" src="http://cdn.morguefile.com/imageData/public/files/e/egings/preview/fldr_2004_01_15/file000950694796.jpg">
+          <img class="img-polaroid" src="http://placehold.it/480x300">
         </div>
         
         <div class="span5 actions">
@@ -254,9 +222,105 @@ THIS IS THE PRE-STYLED NAV:
         </div>		<!--  /.actions ln 144 -->
       </div>		<!--  /.pitch, ln 138 -->
       
-      <!--   /* MARKETING STARTS HERE */  -->   
-      
-<!--   /* REPLACE 2 MKTG DIVS W ROW-FLUID DIVS.    
+      <!--   /* MARKETING STARTS HERE */  -->      
+
+      <div class="row-fluid section1">
+        <div class="span5 offset1 asset">
+          <img class="img-polaroid" src="http://placehold.it/480x300">
+        </div>
+        <div class="span5 copy">
+          <p> AT LAST! THE PRODUCT YOU'VE BEEN DREAMING OF IS HERE! </p>
+        </div>
+	 </div>
+	 
+     <div class="row-fluid section2">
+        <div class="span5 offset1 copy copy-right">
+        	<p> BEAT THE HOLIDAY RUSH, AND GET IT WHILE SUPPLIES LAST! </p>
+        </div>
+     	<div class="span5 asset">
+          <img class="img-polaroid" src="http://placehold.it/480x300">
+     	</div>
+	 </div>	 
+ 
+<!-- This FAQ uses JS accordian, a COLLAPSIBLE ("ACCORDIAN") FAQ which requires jquery.js and bootstrap.js        
+=======
+  <head>
+    <meta charset="utf-8">
+    <title>My First Bitstarter</title>
+    <link type="text/css" rel="stylesheet" 
+          href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-2.3.2.css">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+      .container {
+        width: 960px;
+      }
+      p.lead {
+        padding-top: 15px;
+      }
+      .navigation, .pitch, .section1, .section2, .faq, .footer {
+        padding: 10px 0px 10px 0px;
+      }
+      .video, .thermometer, .order, .social {
+        border: 1px dotted;
+        text-align: center;
+      }
+      .video {
+        /* Internal borders have 1px width, thus need to add 4 x 1px to 120px. */
+        height: 124px;
+        line-height: 124px;
+      }
+      .thermometer, .order, .social {
+        /* line-height to vertically center: http://phrogz.net/css/vertical-align/index.html */
+        height: 40px;
+        line-height: 40px;
+      }
+      div.row {
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row navigation">
+        <div class="span2 logo">
+          Logo
+        </div>
+        <div class="span6 blank">
+          Blank
+        </div>
+        <div class="span4 about">
+          About
+        </div>
+      </div>
+      <div class="row heading">
+        <div class="span12">
+          <h1>Bitstarter Title</h1>
+        </div>
+      </div> 
+     <div class="row subheading">
+        <div class="span12">
+          <p class="lead">This is my first bitstarter project.</p>
+        </div>
+      </div>
+      <div class="row pitch">
+        <div class="span6 video">
+          Video
+        </div>
+        <div class="span6">
+          <div class="thermometer">
+            Thermometer
+          </div>
+          <div class="order">
+            Order
+          </div>
+          <div class="social">
+            Social
+          </div>
+        </div>
+      </div>
       <div class="row section1">
         <div class="span12">
           Marketing Section 1
@@ -267,32 +331,13 @@ THIS IS THE PRE-STYLED NAV:
           Marketing Section 2
         </div>
       </div>
-END old mktg divs -->     
-
-      <div class="row-fluid section1">
-        <div class="span5 offset1 asset">
-          <img class="img-polaroid" src="http://mrg.bz/w2jI7d">
-        </div>
-        <div class="span5 copy">
-          <p>  Shop locally, cook globally!! </p>
-        </div>
-	 </div>
-	 
-     <div class="row-fluid section2">
-        <div class="span5 offset1 copy copy-right">
-        	<p> Please your guests universally! </p>
-        </div>
-     	<div class="span5 asset">
-     	  <img class="img-polaroid" src="http://www.chinadaily.com.cn/photo/images/attachement/jpg/site1/20110129/0023ae73cfef0ead9d3435.jpg">
-       	</div>
-	 </div>	 
- 
-<!-- This FAQ uses JS accordian, a COLLAPSIBLE ("ACCORDIAN") FAQ which requires jquery.js and bootstrap.js        
+>>>>>>> cfa1ee23adce3a202b3c702121c32635fb768002
       <div class="row faq">
         <div class="span12">
           FAQ
         </div>
       </div>
+<<<<<<< HEAD
  --> 
       <div class="row-fluid faq">
           <div class="span10 offset1">
@@ -302,14 +347,13 @@ END old mktg divs -->
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse"
                      data-parent="#accordion2" href="#collapseOne">
-How many people are in a class?                  
+WHAT DOES FAQ STAND FOR?                   
                   </a>
                 </div>
                 <div id="collapseOne" class="accordion-body collapse">
                   <div class="accordion-inner">
-Minimum 3, maximum 8. Our small group classes allow for a multi-course meal to be cooked by each member and shared by all.
-          Private lessons available.                  
-          </div>
+Frequently Asked Questions.            
+                  </div>
                 </div>
               </div>
               
@@ -317,14 +361,13 @@ Minimum 3, maximum 8. Our small group classes allow for a multi-course meal to b
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse"
                      data-parent="#accordion2" href="#collapseTwo">
-Can I still join if I don't live near any international food markets?
+WHAT IS AN FAQ?                   
                   </a>
                 </div>
                 
                 <div id="collapseTwo" class="accordion-body collapse">
                   <div class="accordion-inner">
-Sure. You can join our virtual classes. "Shop" with us remotely, and watch us make the dish of your choice. 
-We can flash-freeze each dinner course and ship it overnight.
+It is a set of questions most often asked by users, and the answers to those questions.             
                   </div>
                 </div>	<!--  /.accordion-body collapse -->
               </div>	<!--  /.acordian group -->
@@ -333,11 +376,14 @@ We can flash-freeze each dinner course and ship it overnight.
          </div>			<!--  /.FAQ -->
       
 <!--   /* Copyright is a typical footer       
+=======
+>>>>>>> cfa1ee23adce3a202b3c702121c32635fb768002
       <div class="row footer">
         <div class="span12">
           Footer
         </div>
       </div>
+<<<<<<< HEAD
 -->
  <div class="row-fluid footer">
         <div class="span12">
@@ -349,6 +395,9 @@ We can flash-freeze each dinner course and ship it overnight.
         </div>
       </div> 	<!--  /.footer -->
     </div>		<!--  /.container post navbar, that contains main page content, ln 199 -->
+=======
+    </div>
+>>>>>>> cfa1ee23adce3a202b3c702121c32635fb768002
   </body>
 </html>
 
