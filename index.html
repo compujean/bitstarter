@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- HW6, Pt2: Crowdfunder w addThis buttons + CSS centering tool -->
+<!-- HW6, Pt3: Crowdfunder w Analytix ->
   <head>
     <meta charset="utf-8">
     <title>Shop, Cook, Feast!</title>
@@ -19,50 +19,51 @@
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
     <style type="text/css">
 
-/* Large desktop */
-@media (min-width: 980px) {
+    /* Large desktop */
+    @media (min-width: 980px) {
       body {
         padding-top: 60px;
       }
-	.linediv-C {
-	border-left: 1px white solid;
-	border-right: 1px white solid;
-	}
-}
-/* Landscape phones */
-@media (min-width: 480px) {
+        .linediv-C {
+        border-left:  1px white solid;
+        border-right: 1px white solid;
+        }
+    }
+    
+    /* Landscape phones */
+    @media (min-width: 480px) {
 	.copy {
 	padding: 2.5% 10%;
-	}
+	}      
         .line-div-C {
         border-top: 1px white solid;
         }
-}  
+    }   
  	body{
         font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-        }      
+        }       
         .heading {
 	font-family:'Diplomata SC', 'Ubuntu', Helvetica, Arial, sans-serif;
 	text-align: center;
         }
         .subheading {
-	font-family: Simonetta', 'Ubuntu', Helvetica, Arial, sans-serif;
+	font-family: 'Simonetta', 'Ubuntu', Helvetica, Arial, sans-serif;
 	text-align: center;
         }
         p.lead {
-        padding-top: 15px;
-		font-size: 24px
-		line-height: 30px;
+        padding-top: 1.5%;  /*15px; */
+            font-size: 24px;
+            line-height: 30px;
         }       
         p {
         font-size: 18px;
         line-height: 24px;
-        } 
+        }    
         .copy {
 	font-family: 'Paytone One', sans-serif;
 	font-weight: 600;
-       }
- 
+        } 
+        
      /* Video pitch and Action */
       .pitch {
         padding: 2.5% 0%;
@@ -99,18 +100,36 @@
       }
       .footer a {
         color: #ccccff;
-      }      
+      }  
 /* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */      
-div.addthis_toolbox {
+ div.addthis_toolbox {
   width:180px;
   margin: 0 auto;
-}
-    </style>
-  </head>
+ }
+</style>
+
+<!-- Google ga.js-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-43070546-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+</script>
+<!-- End Google ga.js-->
+
+</head>
 
 <!-------------------- BODY ----------------------------------------- -->
-
- <!--  START MOBILE-FRIENDLY (Collapsible) NAV BAR: Home About Contact -->
+    
+ <!--  START MOBILE-FRIENDLY NAV BAR: Home About Contact -->
 <body>
   <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -131,8 +150,8 @@ div.addthis_toolbox {
           </div>	<!--/.nav-collapse -->
         </div>		<!--/.container -->
       </div>		<!--/.navbar-inner -->
-    </div>			<!--/.navbar -->
-    <!--  END MOBILE-FRIENDLY NAV BAR -->
+    </div>		<!--/.navbar -->
+ <!--  END MOBILE-FRIENDLY NAV BAR xxx-->
     
     <div class="container">
       <div class="row-fluid heading">
@@ -160,7 +179,7 @@ div.addthis_toolbox {
           <div class="span8 offset2">
             <div class="row-fluid statistics">
               <div class="span4">
-                <div class="linediv-L">
+                <div class="linediv-L">  
                 <h3>1000</h3> <p>backers</p>
                 </div>
               </div>
@@ -172,7 +191,7 @@ div.addthis_toolbox {
               </div>
               
               <div class="span4">
-                <div class="linediv-R">
+                 <div class="linediv-R">
                 <h3>10</h3> <p>days left</p>
                 </div>
               </div>
@@ -195,21 +214,19 @@ div.addthis_toolbox {
 
 	  <div class="row-fluid">          
           <div class="span8 offset2 social">
-<!-- AddThis Button BEGIN -->
+              
+<!-- START AddThis Button -->
   <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
     <a class="addthis_button_preferred_1"></a>
     <a class="addthis_button_preferred_2"></a>
     <a class="addthis_button_compact"></a>
     <a class="addthis_counter addthis_bubble_style"></a>
   </div>
+          
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52043d140b2c2ff4"></script>
+<!-- END AddThis Button -->             
 
-  <script type="text/javascript">
-	var addthis_config = {"data_track_addressbar":true};
-  </script>
-  <script type="text/javascript" 
-	src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52043d140b2c2ff4">
-  </script>
-<!-- AddThis Button END -->  
           </div>
 	  </div>
 	 </div>		<!--  /.row fluid -->
@@ -251,8 +268,8 @@ How many people are in a class?
                 </div>
                 <div id="collapseOne" class="accordion-body collapse">
                   <div class="accordion-inner">
-Usually between 3 and 6. Our small group classes allow for a multi-course meal to be cooked by each member and shared by all.
-          Private lessons and custom group classes available.                  
+Minimum 3, maximum 8. Our small group classes allow for a multi-course meal to be cooked by each member and shared by all.
+          Private lessons available.                  
           </div>
                 </div>
               </div>
@@ -276,13 +293,7 @@ We can flash-freeze each dinner course and ship it overnight.
           </div>		<!--  /.FAQ offset -->
          </div>			<!--  /.FAQ -->
       
-<!--   /* Copyright is a typical footer       
-      <div class="row footer">
-        <div class="span12">
-          Footer
-        </div>
-      </div>
--->
+<!--   /* Copyright -->
  <div class="row-fluid footer">
         <div class="span12">
           <p>This work is licensed under
@@ -292,7 +303,22 @@ We can flash-freeze each dinner course and ship it overnight.
             put at the bottom of the page.</p>
         </div>
       </div> 	<!--  /.footer -->
-    </div>		<!--  /.container post navbar, that contains main page content, ln 199 -->
+    </div>      <!--  /.container post navbar, that contains main page content -->
+    
+    
+<!-- START analytics.js-->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-43070546-1', 'herokuapp.com');
+  ga('send', 'pageview');
+
+</script>
+<!-- End analytics.js -->
+
   </body>
 </html>
-
