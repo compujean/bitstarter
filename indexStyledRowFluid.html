@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- HW6, Pt2: Crowdfunder w addThis buttons + CSS centering tool -->
+<!-- HW6, Pt1: Bug-fixed Styled, Populated Crowdfunder Page -->
+<!-- This version fixes a bug with missing row-fluid classes and adds alt attributes to <img> tags
+ -->
   <head>
     <meta charset="utf-8">
     <title>Shop, Cook, Feast!</title>
@@ -28,41 +30,58 @@
 	border-left: 1px white solid;
 	border-right: 1px white solid;
 	}
+      // }
 }
 /* Landscape phones */
 @media (min-width: 480px) {
 	.copy {
 	padding: 2.5% 10%;
 	}
+        .linediv-L {
+        border-bottom: 1px white solid;
+        }
         .line-div-C {
         border-top: 1px white solid;
         }
 }  
+
+/*
+ For the .heading and .subheading class, we use 
+the built-in p.lead from Bootstrap and also 
+import and use paired Google Fonts to make the 
+style look a little less default.
+1) www.google.com/fonts/specimen/Ubuntu
+2) www.google.com/fonts/specimen/
+Ubuntu#pairings
+3) http://twitter.github.io/bootstrap/basecss.html#typography
+
+ */     
+ 
  	body{
         font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-        }      
-        .heading {
+    }      
+  
+.heading {
 	font-family:'Diplomata SC', 'Ubuntu', Helvetica, Arial, sans-serif;
 	text-align: center;
-        }
-        .subheading {
+}
+.subheading {
 	font-family: Simonetta', 'Ubuntu', Helvetica, Arial, sans-serif;
 	text-align: center;
-        }
-        p.lead {
+}
+      p.lead {
         padding-top: 15px;
 		font-size: 24px
 		line-height: 30px;
-        }       
-        p {
+      }       
+      p {
         font-size: 18px;
         line-height: 24px;
-        } 
-        .copy {
+      }   
+.copy {
 	font-family: 'Paytone One', sans-serif;
 	font-weight: 600;
-       }
- 
+} 
      /* Video pitch and Action */
       .pitch {
         padding: 2.5% 0%;
@@ -100,16 +119,18 @@
       .footer a {
         color: #ccccff;
       }      
-/* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */      
-div.addthis_toolbox {
-  width:180px;
-  margin: 0 auto;
-}
     </style>
   </head>
 
 <!-------------------- BODY ----------------------------------------- -->
-
+<!--  Mobile view navbar 
+We adapt this from one of the examples in the 
+starter-template, with one twist: we use a media 
+query for browsers with less than 980px width to 
+fix an issue where the navbar is pushed too far 
+down on mobile browsers.
+--> 
+    
  <!--  START MOBILE-FRIENDLY (Collapsible) NAV BAR: Home About Contact -->
 <body>
   <div class="navbar navbar-inverse navbar-fixed-top">
@@ -142,7 +163,7 @@ div.addthis_toolbox {
       </div> 
      <div class="row-fluid subheading">
         <div class="span12">
-          <p class="lead">Take your dinner guests on an exotic trip each time they visit your dining room! <br/>
+          <p class="lead">Take your dinner guests on an exotic trip each time they visit your dining room! 
           Learn not only how to cook exotic dishes, but also how to shop like a native in local markets. Pick a country or cuisine. 
           Learn from an expert how and where to shop like a local, then enjoy the fruit of the cooking secrets you've unlocked. 
           </p>
@@ -195,17 +216,8 @@ div.addthis_toolbox {
 
 	  <div class="row-fluid">          
           <div class="span8 offset2 social">
-<!-- AddThis Button BEGIN -->
-  <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-    <a class="addthis_button_preferred_1"></a>
-    <a class="addthis_button_preferred_2"></a>
-    <a class="addthis_button_compact"></a>
-    <a class="addthis_counter addthis_bubble_style"></a>
-  </div>
-   <script type="text/javascript">var addthis_config={"data_track_addressbar":true};</script>
-   <script type="text/javascript" 
-           src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51e5f5d9549fdf9b"></script>
-<!-- AddThis Button END -->
+            <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
+            <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
           </div>
 	  </div>
 	 </div>		<!--  /.row fluid -->
@@ -247,8 +259,8 @@ How many people are in a class?
                 </div>
                 <div id="collapseOne" class="accordion-body collapse">
                   <div class="accordion-inner">
-Usually between 3 and 6. Our small group classes allow for a multi-course meal to be cooked by each member and shared by all.
-          Private lessons and custom group classes available.                  
+Minimum 3, maximum 8. Our small group classes allow for a multi-course meal to be cooked by each member and shared by all.
+          Private lessons available.                  
           </div>
                 </div>
               </div>
