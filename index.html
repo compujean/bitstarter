@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!- HW6, Pt3: Crowdfunder w Analytix ->
+<!- HW6, Pt4: Crowdfunder w Coinbase Preorder Button ->
   <head>
     <meta charset="utf-8">
     <title>Shop, Cook, Feast!</title>
@@ -102,10 +102,10 @@
         color: #ccccff;
       }  
 /* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */      
- div.addthis_toolbox {
-  width:180px;
-  margin: 0 auto;
- }
+     div.addthis_toolbox { 
+        width:180px;
+        margin: 0 auto;
+    }
 </style>
 
 <script type="text/javascript">
@@ -205,10 +205,20 @@
           </div>
 	  <div class="row-fluid">           
           <div class="span6 offset3 order">
-            <button class="btn btn-success btn-large">Preorder</button>
+<!-- START Coinbit payment button -->    
+<a class="coinbase-button" 
+    data-button-style="custom_large" 
+    data-button-text="Preorder with Bitcoin"
+    data-code="194df347a03e858e34755ab81a780833" 
+    href="https://coinbase.com/checkouts/194df347a03e858e34755ab81a780833">Preorder with Bitcoin
+</a>
+<script type="text/javascript" src="https://coinbase.com/assets/button.js"></script>
+<!-- END Coinbit payment button -->              
+              
+              
+<!--  <button class="btn btn-success btn-large">Preorder</button> -->
           </div>
 	  </div>
-
 	  <div class="row-fluid">          
           <div class="span8 offset2 social">
               
